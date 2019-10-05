@@ -1,8 +1,15 @@
-const user = 'mycodeschool';
-
+const user = 'raghav4';
+let userName;
 function userProfile() {
     window.location.href = `https://gist.github.com/${user}`;
 }
+fetch(`https://api.github.com/users/${user}`)
+    .then(response => response.json())
+    .then(data => {
+        userName = data.name.split(' ');
+        document.getElementById('cFont').innerText = `${userName[0]}'s GitHub Gists`;
+    })
+    .catch(error => console.error(error))
 fetch(`https://api.github.com/users/${user}/gists`)
     .then(response => response.json())
     .then(data => {
@@ -21,6 +28,6 @@ fetch(`https://api.github.com/users/${user}/gists`)
             tr.innerHTML = toInsert;
             tableBody.appendChild(tr);
         }
-        console.log(data) 
+        // console.log(data) 
     })
     .catch(error => console.error(error))
