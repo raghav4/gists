@@ -1,0 +1,37 @@
+body {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    /* background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%); */
+}
+
+.head {
+    color: white;
+    margin-top: 45px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #221122;
+}
+
+.tableContent {
+    margin-top: absolute;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.gistsButton {
+    margin-right: 50px !important;
+    margin-bottom: 5px;
+}
+#userName{
+
+}
+#cFont {
+    font-family: 'Inter Regular' !important;
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    font-style: normal;
+    font-weight: normal !important;
+    src: local('Inter Regular'), url('../assests/Inter-Regular.woff') format('woff');
+}
